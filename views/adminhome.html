@@ -1,0 +1,38 @@
+{% comment %} Admin Dashboard {% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | JustRight</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <img src="/images/logo.png" alt="JustRight Logo" class="logo">
+    <h1>Admin Dashboard</h1>
+    <button id="logout-btn">Logout</button>
+  </header>
+
+  <nav class="dashboard-nav">
+    <a href="/views/admin-reports.html">Manage Reports</a>
+    <a href="/views/admin-users.html">Manage Users</a>
+    <a href="/views/admin-stations.html">Manage Police Stations</a>
+  </nav>
+
+  <main class="dashboard-main">
+    <section class="admin-stats">
+      <div class="stat-card">
+        <h3>Total Users</h3>
+        <p id="total-users">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>Pending Reports</h3>
+        <p id="pending-reports">0</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

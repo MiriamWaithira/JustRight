@@ -1,0 +1,355 @@
+/* General Styles */
+:root {
+    --primary-color: #1a73e8; /* Google Blue */
+    --secondary-color: #d93025; /* Google Red */
+    --background-color: #f8f9fa; /* Google Gray */
+    --text-color: #202124; /* Google Black */
+    --white: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    display: inline;
+}
+
+.nav-list a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-list a:hover {
+    color: var(--secondary-color);
+}
+
+.btn-primary, .btn-secondary {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+}
+
+.btn-secondary {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--white);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--background-color);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+/* Header Section */
+header {
+    background: url('/public/images/header-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.header-content {
+    max-width: 800px;
+    padding: 0 1rem;
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+.header-content h2{
+    font-size: 2rem;
+}
+
+.line {
+    width: 100px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    margin: 1rem auto;
+}
+
+.ctn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--secondary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+.ctn:hover {
+    background-color: --primary-color;
+}
+
+/* Benefits Section */
+.benefits {
+    padding: 2rem;
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 2rem;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.column {
+    flex: 1;
+    margin: 0 1rem;
+}
+
+.column img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+.column h4 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.column p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* About Section */
+.about {
+    padding: 2rem;
+    text-align: center;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 1rem auto;
+}
+
+/* Contact Us Section */
+.contact {
+    padding: 2rem;
+    text-align: center;
+}
+
+.contact p {
+    margin: 0.5rem 0;
+}
+
+/* Footer Section */
+.footer {
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.social-media {
+    margin-bottom: 1rem;
+}
+
+.social-media a {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: var(--secondary-color);
+}
+
+/* Responsive Design - All Device Sizes */
+/* Large Laptops/ Desktops (1200px and up) */
+@media (min-width: 1200px) {
+    .navbar {
+        padding: 1rem 5%;
+    }
+    .header-content h1 {
+        font-size: 3.5rem;
+    }
+}
+
+/* Medium Devices (Tablets/Laptops 768px - 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .navbar {
+        padding: 1rem 3%;
+    }
+    .header-content h1 {
+        font-size: 2.8rem;
+    }
+    .column {
+        margin: 0 0.5rem;
+    }
+}
+
+/* Small Tablets (600px - 767px) */
+@media (min-width: 600px) and (max-width: 767px) {
+    .navbar {
+        padding: 1rem 2%;
+    }
+    .header-content h1 {
+        font-size: 2.2rem;
+    }
+    .header-content h2 {
+        font-size: 1.5rem;
+    }
+    .nav-list {
+        gap: 0.8rem;
+    }
+    .btn-primary, .btn-secondary {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile Phones (upto 599px) */
+@media (max-width: 599px) {
+    .navbar {
+        padding: 0.8rem 5%;
+        flex-wrap: wrap;
+    }
+    .logo {
+        font-size: 1.3rem;
+        margin-right: auto;
+    }
+    .menu-btn {
+        order: 1;
+        margin-left: auto;
+    }
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background: var(--primary-color);
+        width: 100%;
+        padding: 1rem;
+        z-index: 1000;
+    }
+    .nav-list.mobile-menu {
+        display: flex;
+    }
+    .nav-list li {
+        display: flex;
+    }
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+    }
+    .header-content h1 {
+        font-size: 1.8rem;
+        margin: 0.5rem 0;
+    }
+    .header-content h2 {
+        font-size: 1.2rem;
+    }
+    .line {
+        width: 80px;
+        height: 3px;
+    }
+    .row {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+    .column {
+        margin: 0.5rem 0;
+    }
+    .column img {
+        max-width: 100%;
+    }
+    .footer {
+        padding: 0.8rem;
+    }
+    .social-media a {
+        font-size: 1.2rem;
+        margin: 0 0.3rem;
+    }
+}
+
+/* Extra Small Phones (upto 375px) */
+@media (max-width: 375px) {
+    .header-content h1 {
+        font-size: 1.5rem;
+    }
+    .headre-content h2 {
+        font-size: 1rem;
+    }
+    .ctn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    .footer p {
+        font-size: 0.8rem;
+    }
+}

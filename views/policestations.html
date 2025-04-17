@@ -1,0 +1,30 @@
+{% comment %} Police Station {% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Police Stations | JustRight</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <img src="/images/logo.png" alt="JustRight Logo" class="logo">
+    <h1>Police Stations</h1>
+    <a href="/views/userhome.html" class="back-btn">Back to Dashboard</a>
+  </header>
+
+  <main class="stations-container">
+    <div class="search-bar">
+      <input type="text" id="station-search" placeholder="Search by name or location...">
+      <button id="search-btn">Search</button>
+    </div>
+
+    <div id="stations-list">
+      <!-- Stations will be loaded here by main.js -->
+    </div>
+  </main>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

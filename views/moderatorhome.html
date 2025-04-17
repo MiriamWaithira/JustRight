@@ -1,0 +1,31 @@
+{% comment %} Moderator Dashboard {% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moderator Dashboard | JustRight</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <img src="/images/logo.png" alt="JustRight Logo" class="logo">
+    <h1>Moderator Dashboard</h1>
+    <button id="logout-btn">Logout</button>
+  </header>
+
+  <nav class="dashboard-nav">
+    <a href="/views/latestreports.html">Latest Reports</a>
+    <a href="/views/myassignedreports.html">My Assigned Reports</a>
+    <a href="/views/modmessages.html">Messages</a>
+  </nav>
+
+  <main class="dashboard-main">
+    <section class="moderator-stats">
+      <h2>Pending Reports: <span id="pending-count">0</span></h2>
+    </section>
+  </main>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

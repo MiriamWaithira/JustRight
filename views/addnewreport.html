@@ -1,0 +1,54 @@
+{% comment %} Report Submission {% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report a Crime | JustRight</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <img src="/images/logo.png" alt="JustRight Logo" class="logo">
+    <h1>Report a Crime</h1>
+    <a href="/views/userhome.html" class="back-btn">Back to Dashboard</a>
+  </header>
+
+  <main class="form-container">
+    <form id="report-form">
+      <select id="incident-type" required>
+        <option value="" disabled selected>Select Incident Type</option>
+        <option value="theft">Theft</option>
+        <option value="assault">Assault</option>
+        <option value="vandalism">Vandalism</option>
+      </select>
+
+      <select id="incident-status" required>
+        <option value="" disabled selected>Select Status</option>
+        <option value="ongoing">Ongoing</option>
+        <option value="just-happened">Just Happened</option>
+        <option value="happened-2h-ago">Happened >2 Hours Ago</option>
+      </select>
+
+      <textarea id="incident-description" placeholder="Description" required></textarea>
+
+      <select id="incident-location" required>
+        <option value="" disabled selected>Select County</option>
+        <option value="nairobi">Nairobi</option>
+        <option value="mombasa">Mombasa</option>
+      </select>
+
+      <input type="text" id="exact-location" placeholder="Exact Location" required>
+
+      <div class="file-upload">
+        <label for="report-file">Upload Document (Optional)</label>
+        <input type="file" id="report-file" accept=".pdf,.docx,.jpg,.png">
+      </div>
+
+      <button type="submit">Submit Report</button>
+    </form>
+  </main>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

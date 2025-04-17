@@ -1,0 +1,33 @@
+{% comment %} User Dashboard {% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard | JustRight</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <img src="/images/logo.png" alt="JustRight Logo" class="logo">
+    <h1>User Dashboard</h1>
+    <button id="logout-btn">Logout</button>
+  </header>
+
+  <nav class="dashboard-nav">
+    <a href="/views/addnewreport.html">Report a Crime</a>
+    <a href="/views/myreports.html">My Reports</a>
+    <a href="/views/policestations.html">Police Stations</a>
+    <a href="/views/onlinesupport.html">Online Support</a>
+  </nav>
+
+  <main class="dashboard-main">
+    <section class="quick-stats">
+      <h2>Recent Activity</h2>
+      <div id="recent-reports"></div>
+    </section>
+  </main>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% comment %} Support Messages {% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Support | JustRight</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <img src="/images/logo.png" alt="JustRight Logo" class="logo">
+    <h1>Online Support</h1>
+    <a href="/views/userhome.html" class="back-btn">Back to Dashboard</a>
+  </header>
+
+  <main class="support-container">
+    <form id="message-form">
+      <input type="text" id="message-name" placeholder="Full Name" required>
+      <input type="email" id="message-email" placeholder="Email" required>
+      <input type="tel" id="message-phone" placeholder="Phone Number">
+      <textarea id="message-text" placeholder="Your message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

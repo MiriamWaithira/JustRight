@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just Right - Home</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+</head>
+<body>
+    <! -- Navigation Bar -->
+    <nav class="navbar">
+        <h1 class="logo">👩‍⚖️ JustRight</h1>
+        <ul class="nav-list">
+            <li class="active"><a href="#home">Home</a></li>
+            li><a href="#about">About Us</a></li>
+            li><a href="#contact">Contact</a></li>
+            <li class="btn-secondary dropdown">
+                <a href="#" class="login-dropdown">Log In</a>
+                <div class="dropdown-content">
+                    <a href="/user/login">Log In as a Public User</a>
+                    <a href="/moderator/login">Log In as a Moderator/Advocate</a>
+                </div>
+            </li>
+            <li class="btn-secondary dropdown">
+                <a href="#" class="admin-dropdown">Admin</a>
+                <div class="dropdown-content">
+                    <a href="/admin/register">Register as Admin</a>
+                    <a href="/admin/login">Log In as Admin</a>
+                </div>
+            </li>
+            <li class="btn-primary"><a href="/user/register">Join to Report</a></li>
+            <li class="btn-primary"><a href="/moderator/register">Join to Help</a></li>
+        </ul>
+        <i class="fas fa-bars menu-btn"></i>
+    </nav>
+
+    <!-- Header Section -->
+    <header id="home">
+        <div class="header-content">
+            <h2>Report a crime or help others find justice for a better Society.</h2>
+            <div class="line"></div>
+            <h1>YOUR ONE-STOP PLATFORM FOR SCIAL JUSTICE, ONE CLICK AT A TIME!</h1>
+            <a href="#about" class="ctn">Learn More</a>
+        </div>
+    </header>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="title">
+            <h1>Why JustRight?</h1>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="/public/images/report-crime.jpg" alt="Report Crime">
+                <h4>Don't ignore social injustice!</h4>
+                <p>Report any crime or social injustice incident with ease
+                 and confidence.</p>
+                <a href="/user/register" class="ctn">Get Started</a>
+            </div>
+            <div class="column">
+                <img src="/public/images/help-others.jpg" alt="Help Others">
+                <h4>Are you willing to help?</h4>
+                <p>Join as an advocate or moderator to assist victims 
+                and make society a better place.</p>
+                <a href="/moderatoer/register" class="ctn">Join Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-content">
+            <h1>ABOUT US</h1>
+            <div class="line"></div>
+            <p>JustRight is a platform that empowers individuals 
+            to report crimes and injustices they have faced or witnessed. Our mission is to bridge the gap between victims and justice by providing a secure and supportive environment.</p>
+            <p>Moderators, including legal experts and advocates, are available 
+            to offer guidance and support, ensuring that every report is taken seriously and acted upon. We believe in the power of community and the importance of standing up for what is right.</p>
+            <p>Join us in our mission to create a safer, fairer society, one report at a time.</p>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact">
+        <div class="title">
+            <h1>Contact Us</h1>
+            <div class="line"></div>
+            <p>123 Justice Avenue, NBO 10160, NAIROBI, KENYA</p>
+            <p>Phone: +254 701 234 567</p>
+            <p>Email: support@justright.org</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <section class="footer">
+        <p>123 Justice Avenue, NBO 10160, NAIROBI, KENYA | Phone: +254 701 234 567 | Email: support@justright.org<br>
+        Copyright © 2024 JustRight</p>
+    </section>
+
+    <!-- JavaScript for Interactive Elements -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.querySelector('.menu-btn');
+            const navlist = document.querySelector('nav-list');
+            const loginDropdown = document.querySelector('.login-dropdown');
+            const adminDropdown = document.querySelector('.admin-dropdown');
+
+            // Toggle mobile menu
+            menuBtn.addEventListener('click', () => {
+                navlist.classList.toggle('mobile-menu');
+                menu.Btn.classList.toggle('active');  //Toggle button state
+            });
+
+            // Toggle Login dropdown
+            loginDropdown.addEventListener('click', (e) => {
+                e.preventDefault();
+                const dropdownContent = document.querySelector('.login-dropdown + .dropdown-content');
+                dropdownContent.classList.toggle('show');
+            });
+
+            // Toggle Admin Dropdown
+            adminDropdown.addEventListener('click', (e) => {
+                e.preventDefault();
+                const dropdownContent = document.querySelector('.admin-dropdown + .dropdown-content');
+                ropdownContent.classList.toggle('show');
+            });
+        })
+    </script>
+</body>
+</html>
