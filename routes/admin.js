@@ -1,30 +1,26 @@
-// routes/message.js
-// Messages Routes
+// routes/Admin.js
+// Admin Routes
 const express = require('express');
 const router = express.Router();
 
 // Import controllers
 const {
-  createSupportMessage,
-  getAllMessages,
-  markMessageAsRead
-} = require('../controllers/messageController');
+  getDashboardStatistics,
+  getAllSystemUsers
+} = require('../controllers/adminController');
 
 // Import middleware
 const { authenticateUser } = require('../middleware/authMiddleware');
 
-// Public route
-router.post('/', createSupportMessage);
-
 // Admin routes
-router.get('/', 
+router.get('/stats', 
   authenticateUser('admin'), 
-  getAllMessages
+  getDashboardStatistics
 );
 
-router.patch('/:id/read', 
+router.get('/users', 
   authenticateUser('admin'), 
-  markMessageAsRead
+  getAllSystemUsers
 );
 
 module.exports = router;

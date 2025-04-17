@@ -20,7 +20,8 @@ module.exports = (sequelize, DataTypes) => {
     location: DataTypes.STRING,
     exactLocation: DataTypes.STRING,
     filePath: DataTypes.STRING,
-    publicUserId: DataTypes.INTEGER
+    publicUserId: DataTypes.INTEGER,
+    moderatorId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Report',
